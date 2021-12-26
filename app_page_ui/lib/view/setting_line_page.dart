@@ -332,72 +332,78 @@ class _SettingLinePageState extends State<SettingLinePage> with SingleTickerProv
                   ],
                 ),
                 Table(
+                  columnWidths: const <int, TableColumnWidth>{
+                    0: FixedColumnWidth(46.0),
+                    1: FixedColumnWidth(100.0),
+                    2: FixedColumnWidth(90.0),
+                    3: FixedColumnWidth(100.0),
+                  },
                   border: TableBorder.all(
                       color: Colors.blueAccent
                   ),
                   children: [
                     TableRow(
                         children: [
-                          Text("杆号", style: TextStyle(fontSize: 15, color: Colors.grey),),
-                          Text("故障代码", style: TextStyle(fontSize: 15, color: Colors.grey),),
-                          Text("报障时间", style: TextStyle(fontSize: 15, color: Colors.grey),),
-                          Text("取消时间", style: TextStyle(fontSize: 15, color: Colors.grey),),
+                          Text("杆号", style: TextStyle(fontSize: 15, color: Colors.grey), textAlign: TextAlign.center),
+                          Text("故障代码", style: TextStyle(fontSize: 15, color: Colors.grey), textAlign: TextAlign.center),
+                          Text("报障时间", style: TextStyle(fontSize: 15, color: Colors.grey), textAlign: TextAlign.center),
+                          Text("取消时间", style: TextStyle(fontSize: 15, color: Colors.grey), textAlign: TextAlign.center),
                         ]
                     ),
                     TableRow(
                         children: [
-                          Text("001", style: TextStyle(fontSize: 15, color: Colors.grey),),
-                          Text("FA 倾倒报警", style: TextStyle(fontSize: 15, color: Colors.grey),),
-                          Text("0825-19:23", style: TextStyle(fontSize: 15, color: Colors.grey),),
-                          Text("0825-19:28", style: TextStyle(fontSize: 15, color: Colors.grey),),
+                          Text("001", style: TextStyle(fontSize: 15, color: Colors.grey), textAlign: TextAlign.center),
+                          Text("FA 倾倒报警", style: TextStyle(fontSize: 15, color: Colors.grey), textAlign: TextAlign.center),
+                          Text("0825-19:23", style: TextStyle(fontSize: 15, color: Colors.grey), textAlign: TextAlign.center),
+                          Text("0825-19:28", style: TextStyle(fontSize: 15, color: Colors.grey), textAlign: TextAlign.center),
                         ]
                     ),
                     TableRow(
                         children: [
-                          Text("002", style: TextStyle(fontSize: 15, color: Colors.grey),),
-                          Text("FC 高压报警", style: TextStyle(fontSize: 15, color: Colors.grey),),
-                          Text("0825-19:23", style: TextStyle(fontSize: 15, color: Colors.grey),),
-                          Text("0825-19:28", style: TextStyle(fontSize: 15, color: Colors.grey),),
+                          Text("002", style: TextStyle(fontSize: 15, color: Colors.grey), textAlign: TextAlign.center),
+                          Text("FC 高压报警", style: TextStyle(fontSize: 15, color: Colors.grey), textAlign: TextAlign.center),
+                          Text("0825-19:23", style: TextStyle(fontSize: 15, color: Colors.grey), textAlign: TextAlign.center),
+                          Text("0825-19:28", style: TextStyle(fontSize: 15, color: Colors.grey), textAlign: TextAlign.center),
                         ]
                     ),
                     TableRow(
                         children: [
-                          Text("003", style: TextStyle(fontSize: 15, color: Colors.grey),),
-                          Text("FD 欠压报警", style: TextStyle(fontSize: 15, color: Colors.grey),),
-                          Text("0825-19:23", style: TextStyle(fontSize: 15, color: Colors.grey),),
-                          Text("0825-19:28", style: TextStyle(fontSize: 15, color: Colors.grey),),
+                          Text("003", style: TextStyle(fontSize: 15, color: Colors.grey), textAlign: TextAlign.center),
+                          Text("FD 欠压报警", style: TextStyle(fontSize: 15, color: Colors.grey), textAlign: TextAlign.center),
+                          Text("0825-19:23", style: TextStyle(fontSize: 15, color: Colors.grey), textAlign: TextAlign.center),
+                          Text("0825-19:28", style: TextStyle(fontSize: 15, color: Colors.grey), textAlign: TextAlign.center),
                         ]
                     ),
                     TableRow(
                         children: [
-                          Text("004", style: TextStyle(fontSize: 15, color: Colors.grey),),
-                          Text("AA 漏电报警", style: TextStyle(fontSize: 15, color: Colors.grey),),
-                          Text("0825-19:23", style: TextStyle(fontSize: 15, color: Colors.grey),),
-                          Text("0825-19:28", style: TextStyle(fontSize: 15, color: Colors.grey),),
+                          Text("004", style: TextStyle(fontSize: 15, color: Colors.grey), textAlign: TextAlign.center),
+                          Text("AA 漏电报警", style: TextStyle(fontSize: 15, color: Colors.grey), textAlign: TextAlign.center),
+                          Text("0825-19:23", style: TextStyle(fontSize: 15, color: Colors.grey), textAlign: TextAlign.center),
+                          Text("0825-19:28", style: TextStyle(fontSize: 15, color: Colors.grey), textAlign: TextAlign.center),
                         ]
                     ),
                     TableRow(
                         children: [
-                          Text("005", style: TextStyle(fontSize: 15, color: Colors.grey),),
-                          Text("BC 超载报警", style: TextStyle(fontSize: 15, color: Colors.grey),),
-                          Text("0825-19:23", style: TextStyle(fontSize: 15, color: Colors.grey),),
-                          Text("0825-19:28", style: TextStyle(fontSize: 15, color: Colors.grey),),
+                          Text("005", style: TextStyle(fontSize: 15, color: Colors.grey), textAlign: TextAlign.center),
+                          Text("BC 超载报警", style: TextStyle(fontSize: 15, color: Colors.grey), textAlign: TextAlign.center),
+                          Text("0825-19:23", style: TextStyle(fontSize: 15, color: Colors.grey), textAlign: TextAlign.center),
+                          Text("0825-19:28", style: TextStyle(fontSize: 15, color: Colors.grey), textAlign: TextAlign.center),
                         ]
                     ),
                     TableRow(
                         children: [
-                          Text("", style: TextStyle(fontSize: 15, color: Colors.grey),),
-                          Text("", style: TextStyle(fontSize: 15, color: Colors.grey),),
-                          Text("", style: TextStyle(fontSize: 15, color: Colors.grey),),
-                          Text("", style: TextStyle(fontSize: 15, color: Colors.grey),),
+                          Text("", style: TextStyle(fontSize: 15, color: Colors.grey), textAlign: TextAlign.center),
+                          Text("", style: TextStyle(fontSize: 15, color: Colors.grey), textAlign: TextAlign.center),
+                          Text("", style: TextStyle(fontSize: 15, color: Colors.grey), textAlign: TextAlign.center),
+                          Text("", style: TextStyle(fontSize: 15, color: Colors.grey), textAlign: TextAlign.center),
                         ]
                     ),
                     TableRow(
                         children: [
-                          Text("", style: TextStyle(fontSize: 15, color: Colors.grey),),
-                          Text("", style: TextStyle(fontSize: 15, color: Colors.grey),),
-                          Text("", style: TextStyle(fontSize: 15, color: Colors.grey),),
-                          Text("", style: TextStyle(fontSize: 15, color: Colors.grey),),
+                          Text("", style: TextStyle(fontSize: 15, color: Colors.grey), textAlign: TextAlign.center),
+                          Text("", style: TextStyle(fontSize: 15, color: Colors.grey), textAlign: TextAlign.center),
+                          Text("", style: TextStyle(fontSize: 15, color: Colors.grey), textAlign: TextAlign.center),
+                          Text("", style: TextStyle(fontSize: 15, color: Colors.grey), textAlign: TextAlign.center),
                         ]
                     )
                   ],
