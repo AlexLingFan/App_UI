@@ -59,10 +59,9 @@ class _SettingLinePageState extends State<SettingLinePage> with SingleTickerProv
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              SizedBox(width: 13,),
+              SizedBox(width: 16),
               Container(
-                width: 150,
-                // height: 210,
+                width: 158,
                 decoration: BoxDecoration(
                     boxShadow: [
                       BoxShadow(
@@ -70,7 +69,8 @@ class _SettingLinePageState extends State<SettingLinePage> with SingleTickerProv
                     ],
                     color: Colors.white70,
                     borderRadius: BorderRadius.circular(5)),
-                child: Column(mainAxisAlignment: MainAxisAlignment.start,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Row(
                       children: [
@@ -129,9 +129,9 @@ class _SettingLinePageState extends State<SettingLinePage> with SingleTickerProv
                     ),
                     SizedBox(height: 6),
                     Image.network("https://img1.baidu.com/it/u=2025550631,4047872267&fm=26&fmt=auto", fit: BoxFit.cover, width: 150, height: 70,),
-                    SizedBox(height: 10),
+                    SizedBox(height: 13),
                     Text("当前设置照明曲线", style: TextStyle(fontSize: 16, color: Colors.black45)),
-                    SizedBox(height: 15),
+                    SizedBox(height: 12),
                   ],
                 ),
               ),
@@ -139,7 +139,7 @@ class _SettingLinePageState extends State<SettingLinePage> with SingleTickerProv
               Column(
                 children: [
                   Container(
-                    width: 152,
+                    width: 158,
                     height: 80,
                     decoration: BoxDecoration(
                         boxShadow: [
@@ -167,7 +167,8 @@ class _SettingLinePageState extends State<SettingLinePage> with SingleTickerProv
                        ))),
                   SizedBox(height: 10),
                   Container(
-                    width: 150,
+                    padding: EdgeInsets.only(left: 5, right: 6),
+                    width: 158,
                     decoration: BoxDecoration(
                         boxShadow: [
                           BoxShadow(
@@ -181,23 +182,21 @@ class _SettingLinePageState extends State<SettingLinePage> with SingleTickerProv
                         Row(
                           children: [
                             Icon(Icons.lightbulb, color: Colors.lightBlue),
-                            Text("在线：238", style: TextStyle(color: Colors.grey)),
-                            Spacer(),
-                            Icon(Icons.more_vert, color: Colors.grey),
+                            Text(" 在线：238", style: TextStyle(color: Colors.grey)),
                           ],
                         ),
                         SizedBox(height: 5),
                         Row(
                           children: [
                             Icon(Icons.lightbulb, color: Colors.black12),
-                            Text("离线：008", style: TextStyle(color: Colors.grey)),
+                            Text(" 离线：008", style: TextStyle(color: Colors.grey)),
                           ],
                         ),
                         SizedBox(height: 5),
                         Row(
                           children: [
                             Icon(Icons.warning_amber_outlined, color: Colors.grey),
-                            Text("警告：000", style: TextStyle(color: Colors.grey)),
+                            Text(" 警告：000", style: TextStyle(color: Colors.grey)),
                           ],
                         ),
                         SizedBox(height: 4),
@@ -228,7 +227,7 @@ class _SettingLinePageState extends State<SettingLinePage> with SingleTickerProv
                   )
                 ],
               ),
-              SizedBox(width: 13,),
+              SizedBox(width: 16),
             ],
           ),
           SizedBox(height: 15),
@@ -237,7 +236,7 @@ class _SettingLinePageState extends State<SettingLinePage> with SingleTickerProv
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  SizedBox(width: 13),
+                  SizedBox(width: 8),
                   Container(
                     width: 290,
                     child: CupertinoSlider(
@@ -262,7 +261,7 @@ class _SettingLinePageState extends State<SettingLinePage> with SingleTickerProv
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  SizedBox(width: 13),
+                  SizedBox(width: 8),
                   Container(
                     width: 290,
                     child: CupertinoSlider(
@@ -287,7 +286,7 @@ class _SettingLinePageState extends State<SettingLinePage> with SingleTickerProv
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  SizedBox(width: 13),
+                  SizedBox(width: 8),
                   Container(
                     width: 290,
                     child: CupertinoSlider(
@@ -313,7 +312,7 @@ class _SettingLinePageState extends State<SettingLinePage> with SingleTickerProv
           ),
           SizedBox(height: 15),
           Container(
-            margin: EdgeInsets.only(left: 8, right: 8),
+            margin: EdgeInsets.only(left: 16, right: 15),
             padding: EdgeInsets.all(4),
             decoration: BoxDecoration(
                 boxShadow: [
@@ -333,8 +332,8 @@ class _SettingLinePageState extends State<SettingLinePage> with SingleTickerProv
                 ),
                 Table(
                   columnWidths: const <int, TableColumnWidth>{
-                    0: FixedColumnWidth(46.0),
-                    1: FixedColumnWidth(100.0),
+                    0: FixedColumnWidth(40.0),
+                    1: FixedColumnWidth(90.0),
                     2: FixedColumnWidth(90.0),
                     3: FixedColumnWidth(100.0),
                   },
@@ -413,7 +412,7 @@ class _SettingLinePageState extends State<SettingLinePage> with SingleTickerProv
           ),
          Spacer(),
           Text("中华人民共和国广东省深圳市", style: TextStyle(fontSize: 18, color: Colors.black45)),
-          SizedBox(height: 3),
+          SizedBox(height: 6),
         ],
       ),
     );
