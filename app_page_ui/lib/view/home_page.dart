@@ -236,12 +236,12 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                     children: [
                      Stack(
                        children: [
-                         Row(
+                         Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
                            children: [
-                             SizedBox(width: 7),
+                             SizedBox(width: 2),
                              Container(
                                height: 70,
-                               width: 163,
+                               width: 162,
                                margin: EdgeInsets.only(left: 5, right: 5),
                                decoration: BoxDecoration(
                                    boxShadow: [
@@ -252,7 +252,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                              ),
                              Container(
                                height: 70,
-                               width: 163,
+                               width: 162,
                                margin: EdgeInsets.only(left: 5, right: 5),
                                decoration: BoxDecoration(
                                    boxShadow: [
@@ -260,7 +260,8 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                                    ],
                                    color: Colors.white,
                                    borderRadius: BorderRadius.circular(5)),
-                             )
+                             ),
+                             SizedBox(width: 2),
                            ],
                          ),
                          IgnorePointer(
