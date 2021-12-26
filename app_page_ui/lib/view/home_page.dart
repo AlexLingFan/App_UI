@@ -450,33 +450,6 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                                             /// 此处设置item是否可编辑，再判断传值
                                             // 打印当前id
                                             print(dataItems[index]["id"]);
-                                            // if (dataItems[index]["id"]  != index) {
-                                            //   flag = isCheck;
-                                            // }
-                                            var num = dataItems[index]["id"];
-                                            switch (num) {
-                                              case 1:
-                                               status1 = true;
-                                                break;
-                                              case 2:
-                                                flag = false;
-                                                break;
-                                              case 3:
-                                                flag = false;
-                                                break;
-                                              case 4:
-                                                flag = false;
-                                                break;
-                                              case 5:
-                                                flag = false;
-                                                break;
-                                              case 6:
-                                                flag = false;
-                                                break;
-                                              default:
-                                                flag = false;
-                                            }
-
                                           });
                                         },
                                       )
@@ -498,166 +471,163 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
         ],
       ),
     )
-        : Expanded(
-         child: Column(
-          children: [
-          Expanded(
-            child: ListView.separated(
-              shrinkWrap: true,
-              itemCount: 10,
-              itemBuilder: (BuildContext context, int index) {
-                return index == 0
-                    ? Container(
-                        alignment: AlignmentDirectional.center,
-                        margin: EdgeInsets.only(top: 8, left: 10, right: 10),
-                        padding: EdgeInsets.only(
-                        left: 12, right: 0, top: 12, bottom: 12),
-                      decoration: BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(color: Colors.grey, blurRadius: 3.0)
-                      ],
-                      color: Colors.blue[100],
-                      borderRadius: BorderRadius.circular(5)),
-                    child: Column(
+        : Column(
+      children: [
+      Container(
+        height: 475,
+        child: ListView.separated(
+          shrinkWrap: true,
+          itemCount: 10,
+          itemBuilder: (BuildContext context, int index) {
+            return index == 0
+                ? Container(
+              alignment: AlignmentDirectional.center,
+              margin: EdgeInsets.only(top: 8, left: 10, right: 10),
+              padding: EdgeInsets.only(
+                  left: 12, right: 0, top: 12, bottom: 12),
+              decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(color: Colors.grey, blurRadius: 3.0)
+                  ],
+                  color: Colors.blue[100],
+                  borderRadius: BorderRadius.circular(5)),
+              child: Column(
+                children: [
+                  SizedBox(height: 6),
+                  Row(
                     children: [
-                      SizedBox(height: 6),
-                      Row(
-                        children: [
-                          Icon(Icons.lightbulb, color: Colors.lightBlue),
-                          SizedBox(width: 2),
-                          Text("在线：238", style: TextStyle(color: Colors.grey)),
-                          Spacer(),
-                          Text(dataItems[index]["name"], style: TextStyle(fontSize: 18, color: Colors.black45)),
-                          SizedBox(width: 16),
-                          Icon(Icons.more_vert, color: Colors.grey),
-                          SizedBox(width: 6),
-                        ],
-                      ),
-                      SizedBox(height: 5),
-                      Row(
-                        children: [
-                          Icon(Icons.lightbulb, color: Colors.black12),
-                          SizedBox(width: 2),
-                          Text("离线：008", style: TextStyle(color: Colors.grey)),
-                        ],
-                      ),
-                      SizedBox(height: 5),
-                      Row(
-                        children: [
-                          Icon(Icons.warning_amber_outlined, color: Colors.grey),
-                          SizedBox(width: 2),
-                          Text("警告：000", style: TextStyle(color: Colors.grey)),
-                          Spacer(),
-                          Text("灯光已开", style: TextStyle(fontSize: 16, color: Colors.black12)),
-                          SizedBox(width: 4),
-                          FlutterSwitch(
-                            width: 46,
-                            height: 24,
-                            toggleSize: 21,
-                            padding: 1,
-                            inactiveText: "ON",
-                            activeText: "OFF",
-                            valueFontSize: 8.0,
-                            activeTextColor: Colors.black54,
-                            inactiveTextColor: Colors.blueAccent,
-                            showOnOff: true,
-                            toggleColor: Color.fromRGBO(30, 100, 120, 1),
-                            switchBorder: Border.all(
-                              color: Colors.blueAccent,
-                              width: 1.0,
-                            ),
-                            activeColor: Colors.black12,
-                            inactiveColor: Colors.white70,
-                            value: flag,
-                            onToggle: (isCheck) {
-                              setState(() {
-                                flag = isCheck;
-                              });
-                            },
-                          ),
-                          SizedBox(width: 6),
-                        ],
-                      ),
+                      Icon(Icons.lightbulb, color: Colors.lightBlue),
+                      SizedBox(width: 2),
+                      Text("在线：238", style: TextStyle(color: Colors.grey)),
+                      Spacer(),
+                      Text(dataItems[index]["name"], style: TextStyle(fontSize: 18, color: Colors.black45)),
+                      SizedBox(width: 16),
+                      Icon(Icons.more_vert, color: Colors.grey),
+                      SizedBox(width: 6),
                     ],
                   ),
-                )
-                    : (index == 1
-                    ? Container(
-                    alignment: AlignmentDirectional.center,
-                    margin: EdgeInsets.only(top: 8, left: 10, right: 10),
-                    padding: EdgeInsets.only(left: 12, right: 0, top: 12, bottom: 12),
-                    decoration: BoxDecoration(
-                        boxShadow: [
-                          BoxShadow(
-                              color: Colors.grey, blurRadius: 3.0)
+                  SizedBox(height: 5),
+                  Row(
+                    children: [
+                      Icon(Icons.lightbulb, color: Colors.black12),
+                      SizedBox(width: 2),
+                      Text("离线：008", style: TextStyle(color: Colors.grey)),
+                    ],
+                  ),
+                  SizedBox(height: 5),
+                  Row(
+                    children: [
+                      Icon(Icons.warning_amber_outlined, color: Colors.grey),
+                      SizedBox(width: 2),
+                      Text("警告：000", style: TextStyle(color: Colors.grey)),
+                      Spacer(),
+                      Text("灯光已开", style: TextStyle(fontSize: 16, color: Colors.black12)),
+                      SizedBox(width: 4),
+                      FlutterSwitch(
+                        width: 46,
+                        height: 24,
+                        toggleSize: 21,
+                        padding: 1,
+                        inactiveText: "ON",
+                        activeText: "OFF",
+                        valueFontSize: 8.0,
+                        activeTextColor: Colors.black54,
+                        inactiveTextColor: Colors.blueAccent,
+                        showOnOff: true,
+                        toggleColor: Color.fromRGBO(30, 100, 120, 1),
+                        switchBorder: Border.all(
+                          color: Colors.blueAccent,
+                          width: 1.0,
+                        ),
+                        activeColor: Colors.black12,
+                        inactiveColor: Colors.white70,
+                        value: flag,
+                        onToggle: (isCheck) {
+                          setState(() {
+                            flag = isCheck;
+                          });
+                        },
+                      ),
+                      SizedBox(width: 6),
+                    ],
+                  ),
+                ],
+              ),
+            )
+                : (index == 1
+                ? Container(
+                alignment: AlignmentDirectional.center,
+                margin: EdgeInsets.only(top: 8, left: 10, right: 10),
+                padding: EdgeInsets.only(left: 12, right: 0, top: 12, bottom: 12),
+                decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                          color: Colors.grey, blurRadius: 3.0)
+                    ],
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(5)),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Row(
+                        children: [
+                          Icon(Icons.bolt),
+                          SizedBox(width: 2),
+                          Text("米东南路1号电箱", style: TextStyle(fontSize: 16, color: Colors.black12)),
+                          SizedBox(width: 2),
+                          Text("在线:32DB  功率:19KW", style: TextStyle(fontSize: 13, color: Colors.black12)),
+                          Spacer(),
+                          Icon(Icons.more_horiz, color: Colors.grey,),
+                          SizedBox(width: 6),
                         ],
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(5)),
+                      ),
+                    )
+                  ],
+                )
+            )
+                : Container(
+              alignment: AlignmentDirectional.center,
+              margin: EdgeInsets.only(top: 8, left: 40, right: 10),
+              padding: EdgeInsets.only(left: 12, right: 0, top: 12, bottom: 12),
+              decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                        color: Colors.grey, blurRadius: 3.0)
+                  ],
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(5)),
+              child: Row(
+                children: [
+                  Expanded(
                     child: Row(
                       children: [
-                        Expanded(
-                          child: Row(
-                            children: [
-                              Icon(Icons.bolt),
-                              SizedBox(width: 2),
-                              Text("米东南路1号电箱", style: TextStyle(fontSize: 16, color: Colors.black12)),
-                              SizedBox(width: 2),
-                              Text("在线:32DB  功率:19KW", style: TextStyle(fontSize: 13, color: Colors.black12)),
-                              Spacer(),
-                              Icon(Icons.more_horiz, color: Colors.grey,),
-                              SizedBox(width: 6),
-                            ],
-                          ),
-                        )
-                      ],
-                    )
-                )
-                    : Container(
-                      alignment: AlignmentDirectional.center,
-                      margin: EdgeInsets.only(top: 8, left: 40, right: 10),
-                       padding: EdgeInsets.only(left: 12, right: 0, top: 12, bottom: 12),
-                     decoration: BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(
-                            color: Colors.grey, blurRadius: 3.0)
-                      ],
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(5)),
-                     child: Row(
-                     children: [
-                      Expanded(
-                        child: Row(
-                          children: [
-                            Icon(Icons.lightbulb, color: Colors.lightBlue),
-                            SizedBox(width: 2),
-                            Text(numList[index], style: TextStyle(fontSize: 16, color: Colors.black12)),
-                            SizedBox(width: 15),
-                            Text("在线: 32DB  功率: 89KW", style: TextStyle(fontSize: 13, color: Colors.black12)),
-                            Spacer(),
-                            Icon(Icons.more_horiz, color: Colors.grey,),
-                            SizedBox(width: 6),
+                        Icon(Icons.lightbulb, color: Colors.lightBlue),
+                        SizedBox(width: 2),
+                        Text(numList[index], style: TextStyle(fontSize: 16, color: Colors.black12)),
+                        SizedBox(width: 15),
+                        Text("在线: 32DB  功率: 89KW", style: TextStyle(fontSize: 13, color: Colors.black12)),
+                        Spacer(),
+                        Icon(Icons.more_horiz, color: Colors.grey,),
+                        SizedBox(width: 6),
 
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
-                ));
-              },
-              separatorBuilder: (BuildContext context, int index) {
-                return Container(
-                  height: 3,
-                );
-              },
-            ),
-          ),
-          SizedBox(height: 30),
-          Container(
-            margin: EdgeInsets.only(bottom: 16),
-            child: Text("中华人民共和国广东省深圳市", style: TextStyle(fontSize: 18, color: Colors.black45)),
-          )
-        ],
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ));
+          },
+          separatorBuilder: (BuildContext context, int index) {
+            return Container(
+              height: 3,
+            );
+          },
+        ),
       ),
+        Spacer(),
+        Text("中华人民共和国广东省深圳市", style: TextStyle(fontSize: 18, color: Colors.black45)),
+        SizedBox(height: 3),
+      ],
     );
   }
 

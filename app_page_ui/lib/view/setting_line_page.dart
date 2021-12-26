@@ -405,8 +405,9 @@ class _SettingLinePageState extends State<SettingLinePage> with SingleTickerProv
                 SizedBox(height: 6),
             ]),
           ),
-          SizedBox(height: 13),
-          Text("中华人民共和国广东省深圳市", style: TextStyle(fontSize: 18, color: Colors.black45))
+         Spacer(),
+          Text("中华人民共和国广东省深圳市", style: TextStyle(fontSize: 18, color: Colors.black45)),
+          SizedBox(height: 3),
         ],
       ),
     );
